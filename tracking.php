@@ -16,6 +16,7 @@
         <link rel="icon" type="image/x-icon" href="https://www.iekdeltalive.gr/images/favicon-32x32.png">
         <script src="/js/script.js"></script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="/js/script.js"></script>
     </head>
     <body>
         <!-- Header -->
@@ -27,8 +28,7 @@
 
             
             <nav class="menu">
-                <a href="index.php" class="">Home</a>
-                <a href="index.php" class="">About</a>
+                <a href="index.html" class="">Home</a>
                 <a href="appointment.php" class="">Appointment</a>
                 <a href="#tracking" class="active">Tracking</a>
             </nav>
@@ -81,9 +81,6 @@
                 <p>Copyright &copy; 2024 by Δέλτα Courier | All Rights Reserved.</p>
             </div>
         </footer>
-        <!-- Scripts -->
-        <script src="https://unpkg.com/scrollreveal"></script>
-
     </body>
     
 </html>

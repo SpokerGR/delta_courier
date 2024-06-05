@@ -12,8 +12,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Delta Courier</title>
         <link rel="stylesheet" href="/css/style.css">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link rel="icon" type="image/x-icon" href="https://www.iekdeltalive.gr/images/favicon-32x32.png">
+        <script src="/js/script.js"></script>
     </head>
     <body>
         <!-- Header -->
@@ -25,8 +27,7 @@
 
             
             <nav class="menu">
-                <a href="index.php" class="">Home</a>
-                <a href="index.php" class="">About</a>
+                <a href="index.html" class="">Home</a>
                 <a href="#appointment" class="active">Appointment</a>
                 <a href="tracking.php" class="">Tracking</a>
             </nav>
@@ -37,9 +38,9 @@
         <section class="appointment" id="appointment">
             <h2 class="heading"><span>Appointment</span></h2>
             <form action="appointment.php" method="post">
-                <input type="text" name="aname" id="aname" placeholder="Ονοματεπώνυμο">
-                <input type="text" name="anumber" id="anumber" placeholder="Τηλέφωνο">
-                <select name="alocation" id="alocation">
+                <input type="text" name="aname" id="aname" required placeholder="Ονοματεπώνυμο">
+                <input type="text" name="anumber" id="anumber" required placeholder="Τηλέφωνο">
+                <select name="alocation" required id="alocation">
                     <option>Καταστήματα</option>
                     <option>Σταδίου 26, Αθήνα</option>
                     <option>Ιπποκράτους 22, Αθήνα</option>
@@ -77,7 +78,7 @@
                      $stmt->bind_param("ssss", $name, $number, $location, $date);
                      $stmt->execute();
                      if ($stmt->affected_rows > 0) {
-                        echo "Η κράτηση σας εγκρίθηκε !";
+                        echo '<script>swal("Το ραντεβού σας εγκρίθηκε!", "Ευχαριστούμε πολύ για την συνεργασία!", "success");</script>';
                      } else {
                         echo "Error: " . $sql . ":-" . mysqli_error($sql);
                      }
@@ -94,9 +95,4 @@
             </div>
         </footer>
     </body>
-
-    <!-- Scripts -->
-
-    <script src="/js/script.js"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
 </html>

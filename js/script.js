@@ -1,12 +1,13 @@
 /*===== toggle icon navbar =====*/
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.menu');
+window.onload = () => {
+    let menuIcon = document.querySelector('#menu-icon');
+    let navbar = document.querySelector('.menu');
 
-menuIcon.onclick = () => {
-    menuIcon.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
+    menuIcon.onclick = () => {
+        menuIcon.classList.toggle('bx-x');
+        navbar.classList.toggle('active');
+    }
 }
-
 /*===== Scroll active link =====*/
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
@@ -37,16 +38,6 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 };
 
-/*===== Scroll Reveal =====*/
-ScrollReveal({
-    reset: true,
-    distance: '80px',
-    duration: 2000,
-    delay: 200,     
-});
-
-ScrollReveal().reveal('.home-content',  { origin: 'top' });
-ScrollReveal().reveal('.heading', { origin: 'top' });
 
   
 

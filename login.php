@@ -13,6 +13,7 @@
         <title>Delta Courier | Admin</title>
         <link rel="stylesheet" href="/css/admin.css">
         <link rel="icon" type="image/x-icon" href="https://www.iekdeltalive.gr/images/favicon-32x32.png">
+        <script src="/js/script.js"></script>
     </head>
     <body>
         <form action="login.php" method="post">
@@ -48,6 +49,4 @@
                             
         ?>
     </body>
-    <script src="/js/script.js"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
 </html>
